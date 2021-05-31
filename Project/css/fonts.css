@@ -1,0 +1,18 @@
+/* font-family: Chilanka; */
+
+@font-face{
+    font-family: Chilanka;
+    src: url('../fonts/Chilanka/Chilanka-Regular.ttf');
+}
+
+/* font-family:PlayfairItalic */
+
+@font-face{
+    font-family: PlayfairItalic;
+    src: url('../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf');
+}
+
+@font-face{
+    font-family: Abel;
+    src: url('../fonts/Abel/Abel-Regular.ttf');
+}

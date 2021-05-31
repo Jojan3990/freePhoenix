@@ -1,0 +1,86 @@
+/* --------------Specifying Variable------------- */
+:root{
+
+    /* This is for Theme Color */
+    --text-gray:#3f4954; /* It makes it easir to just use this value to input text as gray value*/
+    --text-light:#ee6c4d; /* This is for my theme like color for nav items */
+
+    /* This is for gradient color */
+    --greena: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+/* --------------Specifying Variable------------- */
+main.containerpg3{
+    display: grid;
+    grid-template-columns: 50% 50%;  
+    padding: 3rem;
+}
+
+main .formContact .frmContact{
+   font-size: 1.5rem;
+   background-color:var;
+   padding: 1rem 1rem ; 
+}
+main .formContact .frmContactSubmit{
+    font-size: 1.8rem;
+}
+main .formContact .contactfield1{
+    padding: 3rem;
+}
+main .formContact .contactfield1 .contactlegend1{
+    color: var(--text-light);
+    font-size: 2rem;
+}
+main .formContact .contactfield1 .frmContactSubmit{
+    border: 1px;
+    border-radius: 2rem;
+    padding: 0.8rem 2rem;
+    font-family: Abel;
+    background-color: black;
+    color: white;
+}
+main .formContact .contactfield1 .frmContactSubmit:hover{
+    cursor: pointer;
+    background-color: #ee6c4d;
+}
+main .connect{
+    text-align: center;
+    padding: 2rem;
+}
+
+main .imgcontact{
+    clip-path: circle();
+}
+main .connect .connectSocial i{
+    padding: 2rem;
+    font-size: 4rem;
+}
+main .connect .connectSocial .fa-facebook{
+    color: blue;
+}
+main .connect .connectSocial .fa-instagram{
+    color: crimson;
+}
+main .connect .connectSocial .fa-youtube{
+    color: red;
+}
+/* Viewport less than or equal to 1255px */
+
+@media only screen  and (max-width:910px){
+    main.containerpg3{
+        grid-template-columns: repeat(1,1fr);
+    }
+    main .formContact .contactfield1 .contactlegend1{
+        font-size: 1rem;
+    }
+    main.containerpg3 .frmContact{
+        font-size: 0.8rem;
+    }
+    main.containerpg3 .connect .imgcontact{
+        height: 17vh;
+    }
+    main.containerpg3 .formContact .frmContactSubmit{
+        font-size: 1rem;
+    }
+}
+
+/* Viewport less than or equal to 1255px */

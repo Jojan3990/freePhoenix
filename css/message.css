@@ -1,0 +1,189 @@
+.container .header .heading{
+    text-align: center;
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #292727;
+    color: white;
+}
+
+/* -------------------for body---------  */
+.container .body{
+    /* padding: 2rem; */
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding: 1rem;
+    background-color: lightcoral;
+    height: 60vh;
+    width: 85vh;
+    border: none;
+    outline: none;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column-reverse;
+    white-space: nowrap;
+    /* display: inline-block; */
+}
+.container .body .content{
+    color: black;
+    font-family: Abel;
+    font-size: 1.2rem;
+}
+.container .body .content .profile_pic_edit{
+    clip-path: circle();
+    height: 60px;
+}
+.container .body .content .comment_edit{
+    position: relative;
+    top: -1.4rem;
+    left: 0.8rem;
+    border: 1px solid white;
+    padding: 0.7rem;
+    border-radius: 1.5rem;
+    /* overflow: scroll; */
+}
+/* ------------for body end---------  */
+.container .foot-type{
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+.container .foot-type .comment_user{
+    width: 45rem;
+    outline: none;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+.container .foot-type input{
+    outline: none;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+.container .foot-type .submit_edit:hover{
+    cursor: pointer;
+}
+.container .foot-type .submit_edit{
+    position: relative;
+    top: -1rem;
+    color: white;
+    background-color: #292727;
+    outline: none;
+    border: none;
+    padding: 0.8rem;
+    font-size: 1rem;
+    /* width: 7rem; */
+}
+main .con_main{
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+main .con_main .container_second{
+    margin-left: 3rem;
+    padding-right: 5rem;
+    padding-top: 2rem;
+    margin-bottom: 3rem;
+}
+main .con_main .container_second .pic{
+    background-image: url('../assets/mess1.jpg');
+    background-size: contain;
+    height: 80vh;
+    /* background-attachment: fixed; */
+}
+.error_show{
+    font-size: 1.5rem;
+    font-family: Abel;
+    color: crimson;
+    margin-left: 6rem;
+    margin-bottom: 1rem;
+}
+@media only screen and (max-width:1014px){
+    main .con_main{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .container .body{
+        width: 90vh;
+    }
+}
+@media only screen and (max-width:875px){
+    .container .foot-type .comment_user{
+        width: 30rem;
+    }
+}   
+@media only screen and (max-width:1440px){
+    .container .body{
+        width: 70vh;
+    }
+} 
+@media only screen and (max-width:1215px){
+    .container .body{
+        width: 60vh;
+    }
+} 
+@media only screen and (max-width:1010px){
+    .container .body{
+        width: 80vh;
+    }
+} 
+@media only screen and (max-width:950px){
+    .container .body{
+        width: 80vh;
+    }
+} 
+@media only screen and (max-width:855px){
+    .container .body{
+        width: 60vh;
+    }
+} 
+@media only screen and (max-width:670px){
+    .container .body{
+        width: 45vh;
+    }
+    .container .body .content .profile_pic_edit{
+        height: 45px;
+    }
+    .container .body .content .comment_edit{
+        font-size: 0.8rem;
+    }
+} 
+@media only screen and (max-width:530px){
+    .container .body{
+        width: 40vh;
+    }
+} 
+/* @media only screen and (max-width:490px){
+    .container .body{
+        width: 35vh;
+    }
+} 
+@media only screen and (max-width:438px){
+    .container .body{
+        width: 30vh;
+    }
+}  */
+@media only screen and (max-width:390px){
+    .container .body{
+        width: 38vh;
+    }
+} 
+@media only screen and (max-width:635px){
+    .container .foot-type .comment_user{
+        width: 25rem;
+    }
+} 
+@media only screen and (max-width:545px){
+    .container .foot-type .comment_user{
+        width: 15rem;
+    }
+} 
+@media only screen and (max-width:485px){
+    .container .foot-type .comment_user{
+        width: 15rem;
+    }
+    .container .body .content .profile_pic_edit{
+        height: 45px;
+    }
+    .container .body .content .comment_edit{
+        font-size: 0.8rem;
+    }
+    
+} 

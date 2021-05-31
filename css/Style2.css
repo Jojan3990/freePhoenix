@@ -1,0 +1,48 @@
+/* --------------Specifying Variable------------- */
+:root{
+
+    /* This is for Theme Color */
+    --text-gray:#3f4954; /* It makes it easir to just use this value to input text as gray value*/
+    --text-light:#ee6c4d; /* This is for my theme like color for nav items */
+
+    /* This is for gradient color */
+    --greena: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+/* --------------Specifying Variable------------- */
+main{
+    display: flex;
+    
+}
+main.containerpg2{
+    text-align: center;
+    padding: 3.3rem;
+    display: grid;
+    grid-template-columns: 35% 65%;
+}
+
+main .pic .prof {
+    clip-path: circle();
+    background-size: cover;
+    background-position: center;
+    background-image: url('../assets/circle.png');
+    height: 40vh;
+} 
+
+main .About-Me h1{
+    color:#271D1B;
+}
+main .About-Me p{
+    font-size: 1.7rem;
+    color: var(--text-gray);
+}
+
+
+/* Viewport less than or equal to 1255px */
+
+@media only screen  and (max-width:1255px){
+    main.containerpg2{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+/* Viewport less than or equal to 1255px */

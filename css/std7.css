@@ -1,0 +1,47 @@
+main .st{
+    padding: 3rem;
+}
+main .mainpictop{
+    clip-path: circle();
+}
+main .st .pic1{
+    background-attachment: fixed;
+    background-image: url('../assets/studyPic/study9.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+}
+main .st .forpicwithcon .piccon1{
+    background-attachment: fixed;
+    background-image: url('../assets/studyPic/inside/for1.jpg');
+    background-size:cover; 
+    background-position: center;
+    height: 60vh;   
+}
+main .st .forpicwithcon{
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+main .st .forpicwithcon .con1{
+    padding-right: 3rem;
+}
+main .st .forpicwithcon .piccon2{
+    background-size: cover;
+    background-position:center ;
+    /* background-attachment: fixed; */
+    background-image: url('../assets/studyPic/inside/for2.jpg');
+    height: 70vh;
+}
+main .st .forpicwithcon .con2{
+    padding-left: 3rem;
+}
+main .st .love{
+    
+    text-align: center;
+    font-size: 2rem;
+}
+@media only screen and (max-width:900px){
+    main .st .forpicwithcon{
+        grid-template-columns: repeat(1,1fr);
+    }
+}

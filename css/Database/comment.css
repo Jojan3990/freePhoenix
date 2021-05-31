@@ -1,0 +1,60 @@
+main .comment_section{
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+main .comment_section .legend1{
+    font-size: 2.4rem;
+    color: var(--text-light);
+}
+main .comment_section .comm{
+    font-size: 1.6rem;
+    font-family: Abel;
+    margin: 1rem 1rem;
+    padding: 1rem;
+}
+main .comment_section .frmContactSubmit{
+    border: 1px;
+    border-radius: 2rem;
+    padding: 0.8rem 2rem;
+    font-family: Abel;
+    background-color: black;
+    color: white;
+    font-size: 1.5rem;
+}
+main .comment_section .frmContactSubmit:hover{
+    cursor: pointer;
+    background-color: var(--text-light);
+}
+@media screen and (max-width:910px){
+    .main .comment_section{
+        grid-template-columns: repeat(1,1fr);
+    }
+    main .comment_section .comm{
+        font-size: 1.3rem;
+    }
+    main .comment_section .legend1{
+        font-size: 2rem;
+    }
+    main .comment_section .frmContactSubmit{
+        font-size: 1.3rem;
+    }
+}
+main .comment_section .comment_people_section .person{
+    border-style: solid;
+    border-width: 1px;
+    padding-left: 1rem;
+    background-color: #f8f8ff;
+}
+main .comment_section .comment_people_section .person_comment{
+    border-style: solid;
+    border-width: 1px;
+    padding-left: 2rem;
+}
+main .comment_section .comment_people_section .person_comment .right_align{
+    text-align: right;
+    padding-right: 2rem;
+    padding: 1rem;
+}
+main .comment_section .comment_people_section .person_comment .right_align a{
+    color: blue;
+}

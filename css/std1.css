@@ -1,0 +1,14 @@
+main .st{
+    padding: 3rem;
+}
+main .mainpictop{
+    
+    clip-path: circle();
+}
+main .st .pic{
+    background-size: cover;
+    background-position: center;
+    background-image: url('../assets/studyPic/study3.jpg');
+    height: 50vh;
+    background-attachment: fixed;
+}

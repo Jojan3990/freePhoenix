@@ -1,0 +1,947 @@
+@import url('../css/fonts.css'); /* here we import the fonts */
+
+html,body{
+    margin: 0%; /*removes margin*/  
+    box-sizing: border-box; /* this will inculde border and padding to the width and height of element */
+    overflow-x: hidden; 
+}
+
+/* --------------Specifying Variable------------- */
+:root{
+
+    /* This is for Theme Color */
+    --text-gray:#3f4954; /* It makes it easir to just use this value to input text as gray value*/
+    --text-light:#ee6c4d; /* This is for my theme like color for nav items */
+
+    /* This is for gradient color */
+    --greena: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+/* --------------Specifying Variable------------- */
+
+/* ------------Global classses------------- */
+
+a{
+    text-decoration: none; /*all the anchor tag will not have border*/
+    color: var(--text-gray);
+}
+.flex-row{
+    display: flex;
+    flex-direction: row; 
+    flex-wrap:wrap ;/* gives more flexibility as screen size decreases and collapses to next line */
+}
+
+ul{
+    list-style-type: none; /* removes list items bullet */
+}
+
+h1{
+    font-family:PlayfairItalic ;
+    font-size: 2.4rem;
+}
+h3{
+    font-family:Abel;
+    font-size: 2rem;
+}
+button.btn{
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: Abel;
+    cursor: pointer;
+}
+main .heading{
+    color: #271D1B;
+    font-size: 1.9rem;
+}
+main .paragra{
+    font-size: 1.3rem;
+    font-family: Abel;
+}
+
+/* ------------Global classses------------- */
+
+/* --------------- navbar start------------------- */
+
+.nav{
+    background-color: white;
+    padding: 0 2rem; 
+    /* 0 for top and bottom padding r rem for left and right padding */
+    /* using these two properties we can create collapsing navigation menu 
+    so when we click in toogle menu i want to collapse all navigation item and when i click 
+    in toogle menu again i want to hide all navigation item */
+    
+    /* we use height to collapse naviagtion menu and min-height to specify height to nav */
+    height: 0rem;
+    /* min-height: 10vh; This might bring problem so we do */
+    min-height: 14vh;
+    overflow: hidden;
+    transition: height 1s ease-in-out; 
+    /* for making cool look 1sec like delay not sure if it works or not */
+    /* background-color:#D7DBDD ; */
+    /* position: fixed; */
+    /* width: 100%; */
+}
+/* .stick {
+    margin-right: 2rem;
+} */
+.logon{
+    /* margin-left: 2rem; */
+    height: 74px;
+}
+ /* There is space between navigation items */
+.nav .nav-menu{
+    justify-content:space-between ;
+}
+/* this if for .toggle-collapse  */
+.nav .toggle-collapse{
+    position:absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display:none  ;
+}
+.nav .toggle-collapse .toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+.nav .toggle-collapse .toggle-icons{
+    font-size: 1.4rem;
+    color:var(--text-gray) ;
+    /* border: 1px solid black; */
+}
+.collapse{
+    height: 43rem;
+}
+/* toggle-collapse end  */
+.nav .nav-items{
+    display: flex;
+    margin: 1;  
+}
+/* styling nav items */
+.nav .nav-items .nav-link{
+    padding: 1.6rem 1rem;
+    position: relative;
+    font-family: Chilanka;
+    font-size: 1.4rem;
+
+}
+.nav .nav-items .nav-link:hover{
+    background-color:var(--text-light) ;
+}
+
+.nav .nav-items .nav-link:hover a{ /* when i hover the color changes into white pretty awesome haha */
+    color: white; 
+}
+/* This is like heading i have created */
+.nav .nav-brand a{
+    font-size: 1.6rem;
+    padding: 1rem 0;  
+    /* 1 for top and bottom 0 for left and right padding */
+    display: block;
+    font-family: PlayfairItalic;   
+}
+/* adding padding to social item */
+.nav .social{
+    padding: 1.4rem 0;
+}
+.nav .social i{
+    padding: 0.2rem;
+    /* font-size: 2.6rem; */
+}
+.nav .social .fa-user-circle:hover{
+    color: #271D1B;
+}
+.nav .social .fa-user-circle{
+    font-size: 2.2rem;
+    /* position: absolute;
+    top: 0rem;
+    right: 2rem; */
+
+}
+.nav .stick .social .fa-comment-alt{
+    font-size: 2.5rem;
+    position: absolute;
+    top: 2rem;
+    right: 7.6rem;
+    color: #8e2929;
+    /* color: pink; */
+}
+.nav  .stick .social .fa-sign-out-alt{
+    /* background-color: #ee6c4d; */
+    background-color: palevioletred;
+    border-radius: 2rem;
+    color: white;
+    font-size: 1rem;
+    padding: 0.8rem;
+    position: absolute;
+    right: 1rem;
+    top: 2rem;
+} 
+.nav .stick .social{
+    text-align: center;
+}
+.nav .stick .social .pic-profile{
+    clip-path: circle();
+    height: 70px;
+    position: absolute;
+    right: 11.2rem;
+}
+
+/* --------------- navbar end------------------- */
+
+/* ------------credentials didn't match error----------  */
+.nav .cre_error{
+    border: 1px solid black;
+    border-radius: 2rem;
+    padding: 0.4rem;
+    background-color: #8e2929;
+    color: white;
+    font-family: Abel;
+    width: 10rem;
+    text-align: center;
+}
+@media only screen and (max-width:1080px){
+    .nav .stick{
+        position: absolute;
+        right: 5rem;
+        top: 1rem;
+    }
+    .nav .stick .fa-user-circle{
+        position: absolute;
+    }
+}
+
+@media only screen and (max-width:500px){
+    /* .nav .stick .social{
+        position: absolute;
+    } */
+    .nav .stick .social .pic-profile{
+        position: absolute;
+        right: 13rem;
+        height: 65px;
+    }
+    .nav .stick .social .fa-comment-alt{
+        position: absolute;
+        right: 8rem;
+        font-size: 3rem;
+    }
+}
+@media only screen and (max-width:450px){
+    /* .nav .stick .social{
+        position: absolute;
+    } */
+    .nav  .stick .social .fa-sign-out-alt{
+        position: absolute;
+        right: -3rem;
+        font-size: 1rem;
+    }
+    .nav .stick .social .pic-profile{
+        position: absolute;
+        right: 6.2rem;
+        height: 65px;
+    }
+    .nav .stick .social .fa-comment-alt{
+        position: absolute;
+        top: 2rem;
+        right:3rem;
+        font-size: 2.4rem;
+    }
+}
+
+
+/* -------------credentials end------------ */
+
+/* ----------main content--------- */
+
+/* -------this is for info on top---------------- */
+main .mainInfo{
+    display: grid;
+    grid-template-columns: 33% 33% 34% ;
+    padding-right: 5rem;
+    padding-left: 5rem;
+}
+
+main .mainInfo  .infoOne i{
+    color: rgb(50, 106, 158);
+}
+main .mainInfo  .infoTwo i{
+    color: rgb(240, 96, 13);
+}
+main .mainInfo .infopic{
+    background-size: cover;
+    background-image: url('../assets/info1.jpg');
+    height: 30vh;
+    clip-path: circle();
+}
+main .mainInfo {
+    text-align: center;
+}
+main .mainInfo i{
+    padding-top: 2.5rem;
+    font-size: 4.5rem;
+}
+main .mainInfo p{
+    font-size: 1.6rem;
+    font-family: Abel;
+}
+main .mainInfo b{
+    font-size: 2.4rem;
+}
+
+/* -------this is for info on top end---------------- */
+
+
+
+    /* -----site title--------------- */
+
+main .site-title{
+    display: grid;
+    grid-template-columns: 55% 45%;
+    /* margin-left: 4rem; */
+}
+main .site-right{
+    margin-top: 6rem;
+    /* margin-right: 10rem; */
+}
+main .site-right h3,h1{
+    /* color: var(--text-gray); */
+    /* color: aliceblue; */
+}
+main .site-background{
+    width: 100%;
+    background-size: cover;
+    /* animation: Animate 60s ease-in-out infinite; */
+    /* background-attachment: fixed; */
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    background-image: url('../assets/main.png');
+    transition: 2s;
+    
+}
+main .site-background:hover{
+    /* animation: animateee 8s ease-in-out infinite; */
+    transform: scale(1.1);
+    cursor: pointer;
+}
+/* @keyframes animateee{
+    0%{
+        transition: scale(2.4) ;
+    }
+    50%{
+        transition: scale(2.4) ;
+    }
+    100%{
+        transition: scale(2.4) ;
+    }
+}  */
+main .site-title .site-right .background{
+    background-image: url('../assets/back.png');
+    /* width: 100%; */
+    height: 45vh;
+    background-size: cover;
+}
+
+
+main .site-title .site-right{
+    padding-top:6rem ;
+    /* margin-top: 8rem; */
+    /* text-align: center; */
+    color: black;
+    /* font-family: Abel; */
+    /* padding-left: 2rem; */
+}
+main .site-title .site-right h1{
+    margin: .2rem;  
+    /* This will specify top left right and bottom margin */
+    /* color: #fff; */
+    color: var(--text-gray);
+    animation: animatee 8s ease-in-out infinite;
+}
+main .site-title .site-right h3{    
+    margin: .2rem;  
+    /* This will specify top left right and bottom margin */
+    /* color: #fff; */
+    color: var(--text-gray);
+    animation: animatee 8s ease-in-out infinite;
+    
+}
+@keyframes animatee{
+    0%{
+        color: #883333;
+    }
+    50%{
+        color: #743f3f;
+    }
+    100%{
+        color: #8e2929;
+    }
+} 
+main .btn{
+    margin: 1.8rem;
+    background-color:#ee6c4d;
+}
+
+main .site-title .btn:hover{
+    background: transparent;
+    background-color: #271D1B;
+    border:1px solid white;
+    color: crimson;
+}
+main .mid{
+    border-radius: 2rem;
+    box-shadow: 0px 5px 10px black;
+    margin-left: 6rem;
+    margin-right: 6rem;
+    position: relative;
+    top: -5rem;
+}
+main .site-mid{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: white;
+    color: #271D1B;
+    text-align: center;
+}
+main .mid .site-mid a{
+    color: blue;
+}
+
+/* main .site-title .site-background .site-mid h3{
+    
+} */
+    /* -----site title--------------- */
+
+    /* -----------here for reciepe------------- */
+
+
+main .reciepeall .rech{
+    font-family: Chilanka;
+    padding-top: 3%;
+    color: var(--text-gray);
+}
+main .std-back{
+    padding-top: 10%;
+}
+
+main .vi1 {
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+
+
+/* ----------for owl carosuel--------- */
+
+/* main .blogcare{ //This is if you want background image for owl carosuel
+    background: url('../assets/owl.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 100%;
+} */
+/* main .blogcare .blog-post{
+    padding-top: 4rem;
+} */
+
+main .blogcare .blog-post .contentcare{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: 3rem 2rem;
+    box-shadow: 0px 5px 10px black;
+}
+main .contentcare .blog-title{
+    padding: 1.5rem 0rem; 
+    /* 2rem on top and bottom 0 on left and right */
+}
+main .blogcare .btn:hover{
+    background: transparent;
+    border:1px solid black;
+    color: black;
+}
+main .blogcare .containercare{
+    margin: 0 5vw;
+}
+
+/* ----------for owl carosuel end--------- */
+
+/* main .vi1 .con1 .common-pic-tran{
+    transition: 0.25 ease-in-out;
+    
+}
+main .vi1 .con1 .common-pic-tran:hover{
+    transform: scale(1.1);
+    overflow: hidden;
+} */
+
+main .vi1 .con1 .pic3{
+    background-size: cover;
+    background-position: center;
+    background-image: url('../assets/People/Newari/2.jpg');
+    height: 40vh
+}
+
+main .vi1 .con1 .pic5{
+    background-size: cover;
+    background-position: center;
+    background-image: url('../assets/studyPic/study7.jpg');
+    height: 40vh
+}
+main .vi1 .con1 .pic6{
+    background-size: cover;
+    background-position: center;
+    background-image: url('../assets/studyPic/study8.jpg');
+    height: 30vh
+}
+main .vi1 .con1 .pic7{
+    background-size: cover;
+    background-position: center;
+    background-image: url('../assets/studyPic/study9.jpg');
+    height: 40vh
+}
+
+
+
+/* ---------for pic5 and pic6 grid managing-------- */
+
+main .vi1 .con1 .midth{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+main .vi1 .con1 .midth .midth1{
+    padding-right: 3rem;
+}
+main .vi1 .con1 .midth .midth2{
+    padding-left: 1rem;
+    padding-right: 2rem;
+}
+
+/* ---------for pic5 and pic6 grid end-------- */
+
+
+/* ------------managing midthtwo pic3------------ */
+
+main .vi1 .con1 .midthtwo {
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: 55% 45%;
+}
+main .vi1 .con1 .midthtwo .col2{
+    padding-right: 2rem;
+}
+/* ------------managing midthtwo pic3 end------------ */
+
+
+
+/* --------for managing midthfour pic7 ------  */
+
+main .vi1 .con1 .midthfour{
+    display: grid;
+    grid-template-columns: 50% 50% ;
+    padding-bottom: 3rem;
+}
+
+main .vi1 .con1 .midthfour .col6{
+    padding-right: 3rem;
+}
+/* ----------for managing midthfour end----------  */
+
+/* ---------for managing video------------ */
+
+main .you-vid1{
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+main .you-vid1 .you1{
+    position: relative;
+    overflow: scroll;
+    width: 100%;
+}
+main .you-vid1 .col5{
+    padding-left: 2rem;
+}
+
+
+@media only screen and (max-width:760px){
+    main .you-vid1{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+/* ---------for managing video end-------------- */
+main .vi1 a{
+    color: crimson;
+}
+
+/* ----------for connect------------ */
+
+main .connect{
+    text-align: center;
+}
+main .connect h1{
+    font-family: Abel;
+}
+main .connect .connectSocial i{
+    padding: 2rem;
+    font-size: 4rem;
+}
+main .connect .connectSocial .fa-facebook{
+    color: blue;
+}
+main .connect .connectSocial .fa-instagram{
+    color: crimson;
+}
+main .connect .connectSocial .fa-youtube{
+    color: red;
+}
+
+
+/* ----------for connect end--------------- */
+
+/* ------------for side bar------------- */
+main .vi1 .sidebar{
+    overflow: scroll;
+    padding-left: 2rem;
+    text-align: center;
+}
+main .vi1 .sidebar .pic4{
+    background-size: cover;
+    background-image: url('../assets/blogpic/pic1.jpg');
+    height: 60vh;
+    background-position: center;
+    /* background-attachment: fixed; */
+}
+main .vi1 .sidebar .notice-pic{
+    background-size: cover;
+    background-image: url('../assets/blogpic/notice.jpg');
+    height: 50vh;
+    background-position: center;
+}
+
+
+/* ------------for sidebar end------------ */
+
+
+/* -----------here for reciepe------------- */
+
+    /* --------site content------------- */
+
+/* ----------main content--------- */
+    /* container1 */
+main .container{
+    margin: 0 5vw;
+}
+main .welcome{
+    text-align: center;
+}
+main .welcome h1{
+    color:var(--text-gray);
+}
+main .welcome p{
+    font-family: Abel;
+    font-size: 1.5rem;
+}
+    /* container1 */
+   
+/* ----------main content--------- */
+
+/* -------Footer----------- */
+
+footer.container{
+    /* height: 200%; */
+    padding: 3rem;
+    color: white;
+    background:var(--text-light);
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+footer.container .about{
+    padding-left: 3rem;
+    font-family: Abel;  
+}
+footer.container .follow{
+    padding-left: 4rem;
+    font-family: Abel;
+} 
+footer.container .newsletter{
+    padding-left: 3rem;
+}
+footer.container .newsletter .emfooterHome{
+    padding: .5rem .7rem;
+    border: none;
+    /* color: white; */
+}
+
+footer.container .txfooterHome{
+    font-size: 1.3rem;
+}
+footer.container .follow div i{
+    padding: 0rem 0.2rem;
+    font-size: 2rem;
+    color: #03045e;
+}
+footer.container .follow div i:hover{
+    color:var(--text-gray);
+}
+footer.container .rights{
+    color: var(--text-gray);
+    font-size: 0.7rem;
+
+}
+footer.container .move-up{
+    position: absolute;
+    right: 6%;
+    
+}
+footer.container .move-up span{
+    color: var(--text-gray);
+}
+
+footer.container .move-up span:hover{
+    color: white;
+    cursor: pointer;
+}
+
+/* -------Footer----------- */
+
+/* Viewport less than or equal to 750px */
+
+/* Using media query you can create responsive website eg:- if media query viewport is less than
+or equal to 750px i want to specify different property to html elements*/
+/* Viewport less than or equal to 945px */
+
+@media only screen and (max-width:1080px){
+    .nav .nav-menu,.nav-items{
+        flex-direction: column;
+    }
+    .nav .toggle-collapse{
+        display: initial;
+    }
+    .nav .logon{
+        height:  64px;
+    }
+    main .site-right h3{
+        font-size: 1.4rem;
+    }
+    main .site-right h1{
+        font-size: 1.8rem;
+    }
+}
+/* Viewport less than or equal to 945px */
+
+/* managing logo and site background */
+@media only screen and (max-width:405px){
+    .nav .logon{
+        height: 50px;
+    }
+    main .site-right h3{
+        font-size: 1.2rem;
+    }
+    main .site-right h1{
+        font-size: 1.4rem;
+    }
+}
+/* managing logo and site background end */
+
+/* managing .site-title  */
+
+@media only screen and (max-width:870px){
+    main .site-title{
+        grid-template-columns: repeat(1,1fr);
+    }
+    main .site-background{
+        height: 60vh;
+    }
+    main .site-title .site-right{
+        /* padding-top: 100rem; */
+        position: absolute;
+    }
+    main .site-title .site-right h3,h1{
+        color: black;
+    }
+}
+@media only screen and (max-width:405px){
+    main .site-title .site-right h3{
+        font-size: 1rem ;
+    }
+    main .site-title .site-right h1{
+        font-size: 1.2rem;
+    }
+}
+
+/* site-title end  */
+
+/* managing mid  */
+@media only screen and (max-width:1080px)
+{
+    main .mid .site-mid h3{
+        font-size: 1.8rem;
+    }
+    main .mid .site-mid p{
+        font-size: 1.2rem;
+    }
+}
+@media only screen and (max-width:420px){
+    main .mid .site-mid h3{
+        font-size: 1.2rem;
+    }
+    main .mid .site-mid p{
+        font-size: 1rem;
+    }
+    main .mid{
+        padding-top: 2rem;
+    }
+}
+
+/* mid end  */
+
+/* managing viewport for mainInfo  */
+@media only screen and (max-width:1080px){
+    main .mainInfo i{
+        font-size: 3.5rem ;
+    }
+    main .mainInfo .infopic{
+        height: 25vh;
+    }
+}
+@media only screen and (max-width:540px){
+    main .mainInfo i{
+        font-size: 2.5rem ;
+    }
+    main .mainInfo .infopic{
+        height: 18vh;
+    }
+    main .mainInfo b{
+        font-size: 1.9rem;
+    }
+    main .mainInfo p{
+        font-size: 1.4rem;
+    }
+}
+
+/* manaing maininfo end  */
+
+@media only screen and (max-width:1080px){
+    main .welcome h1{
+        font-size: 1.8rem;
+    }
+    main .welcome p{
+        font-size: 1.3rem;
+    }
+}
+@media only screen and (max-width:405px){
+    main .welcome h1{
+        font-size: 1.4rem;
+    }
+    main .welcome p{
+        font-size: 1.2rem;
+    }
+}
+/* managing welcome section  */
+
+
+
+/* welcome section end  */
+
+/* Viewport less than or equal to 730px */
+
+@media only screen and (max-width:470px){
+    footer.container{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+/* Viewport less than or equal to 730px */
+
+@media only screen and (max-width:1400px){
+    main .vi{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+/* for blog on index */
+@media only screen and (max-width:1000px){
+    main .vi1{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+/* for main info for top */
+@media only screen and (max-width:860px){
+    main .mainInfo{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+/* ---------for main info inside info---- */
+@media only screen and (max-width:860px){
+    main .mainInfo {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+/* ------------for mainth for pic5 and pic6---------- */
+@media only screen and (max-width:760px){
+    main .vi1 .con1 .midth{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+/* --------------for midthone pic2-------------- */
+@media only screen and (max-width:760px){
+    main .vi1 .con1 .midthone{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+/* ------------for midthtwo for pic3----------- */
+@media only screen and (max-width:760px){
+    main .vi1 .con1 .midthtwo{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+/* ----------for midththree for pic4---------- */
+@media only screen and (max-width:760px){
+    main .vi1 .con1 .midththree{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+/* ----------for midthfour for pic7------ */
+@media only screen and (max-width:760px){
+    main .vi1 .con1 .midthfour{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+/* -----------managing midth for body -----------  */
+
+@media only screen and (max-width:1080px){
+    main .vi1 .con1 h1{
+        font-size: 1.5rem;
+    }
+    main .vi1 .con1 p{
+        font-size: 1.2rem;
+    }
+}
+@media only screen and (max-width:405px){
+    main .vi1 .con1 h1{
+        font-size: 1.2rem;
+    }
+    main .vi1 .con1 p{
+        font-size: 1rem;
+    }
+}
+
+
+/* -----------managing midth for body end -----------  */
+
+/* -----------for main connect dynamic-------------- */
+@media only screen and (max-width:760px){
+    main .connect .connectSocial i{
+        font-size: 3rem;
+    }
+}

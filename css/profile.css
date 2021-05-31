@@ -1,0 +1,79 @@
+main .head-bio{
+    padding-top: 2rem;
+    text-align: center;
+}
+main .pro-pic-panel{
+    height: 110px;
+    clip-path: circle();
+}
+main .container .foot-bio{
+    text-align: center;
+}
+main .container .body-here {
+    margin-top: 2rem;
+    /* border: 1px solid black; */
+}
+main .body-here .top p{
+    font-size: 1.5rem;
+    font-weight: 900;
+    padding: 2rem;
+    background-color: grey;
+}
+main .container .body-here .form-here{
+    padding-top: 1rem;
+    border: 1px solid black;
+}
+main .container .body-here .form-here input{
+    padding: 0.6rem;
+    /* margin: 1rem; */
+}
+main .container .body-here .form-here .mar_pad{
+    margin: 1rem;
+    width: 20rem;
+}
+main .container .body-here .form-here .mar_pad_pass{
+    width: 44rem;
+}
+main .container .body-here .form-here .email_color{
+    background-color: skyblue;
+    outline: none;
+    border: none;
+}
+main .container .body-here .form-here .info_submit{
+    border: none;
+    outline: none;
+    background-color: black;
+    width: 46rem;
+    margin-bottom: 2rem;
+    color: white;
+    padding: 1rem;
+    font-family: Abel;
+    font-size: 1.5rem;
+}
+main .container .body-here .form-here .color{
+    color: crimson;
+}
+main .container .body-here .form-here .info_submit:hover{
+    cursor: pointer;
+    background-color: grey;
+}
+@media only screen and (max-width:835px){
+    main .container .body-here .form-here .mar_pad_pass{
+        width: 20rem;
+    }
+    main .container .body-here .form-here .info_submit{
+        width: 20rem;
+    }
+}
+@media only screen and (max-width:490px){
+    main .container .body-here .form-here .mar_pad_pass{
+        width: 15rem;
+    }
+    main .container .body-here .form-here .info_submit{
+        width: 15rem;
+    }
+    main .container .body-here .form-here .mar_pad{
+        margin: 1rem;
+        width: 15rem;
+    }
+}
